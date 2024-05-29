@@ -5,6 +5,8 @@
  * @returns
  */
 function checkLength(arr, maxLength = 7) {
+  console.log(arr);
+  console.log(arr.length);
   let messageMax = '';
   let messageMin = '';
   if (arr.length > maxLength) {
@@ -70,7 +72,11 @@ function outputAnswer(result, locator) {
 }
 
 function getArray(list) {
-  return list.replaceAll(', ', ',').split(',');
+  arr = list.replaceAll(', ', ',').split(',');
+  if (arr.length == 1 && arr[0] == '') {
+    arr = [];
+  }
+  return arr;
 }
 function getMaxUI(e) {
   e.preventDefault();
