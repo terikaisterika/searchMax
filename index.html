@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <form name="getMax">
+      <h2>Получить максимальный элемент и его индекс.</h2>
+      <p>Поле "Список" принимает цифры через запятую</p>
+      <p>Максимально возможное значение: 10</p>
+      <p>Минимально возможное значение: -10</p>
+      <p>Количество элементов не должно быть больше 7</p>
+      <label
+        >Список
+        <input type="text" placeholder="1,2,-9" name="list" />
+      </label>
+      <br />
+      <br />
+      <input type="submit" value="Проверь свой список" />
+      <div id="errorInput" class="hidden"></div>
+      <br />
+    </form>
+    <br />
+    <div id="containerAnswer" class="hidden">
+      <div id="answer"></div>
+      <br />
+      <input type="button" id="clearAnswer" value="Убрать ответы" />
+    </div>
+
+    <br />
+    <br />
+    <script src="./src/script.js"></script>
+  </body>
+</html>

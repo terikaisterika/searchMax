@@ -1,0 +1,16 @@
+.hidden {
+  display: none;
+}
+input {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #e1dbdb;
+}
+button {
+  border-radius: 3px;
+  background-color: #e1dbdb;
+}
+.error {
+  border: red;
+  background-color: rgb(214, 130, 130)
+}
