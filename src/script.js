@@ -53,7 +53,7 @@ function getWebElement(locator) {
   return document.querySelector(locator);
 }
 function checkInput() {
-  regExp = /^-?\d{1,2}(,{1}-?\d{1,2})?$/g;
+  regExp = /^-?\d{1,2}(,{1}-?\d{1,2})*$/g;
   if (regExp.test(this.value)) {
     return;
   } else {
