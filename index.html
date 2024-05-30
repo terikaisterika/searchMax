@@ -7,49 +7,51 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <form name="getMax">
-      <h2>Получить максимальный элемент и его индекс.</h2>
-      <p>Поле "Список" принимает целые числа через запятую.</p>
-      <p>Максимально возможное значение: 10.</p>
-      <p>Минимально возможное значение: -10.</p>
-      <p>Количество элементов не должно быть больше 7.</p>
-      <p>
-        Ошибочные данные (буквы, точки, запятые в конце) будут преобразовываться
-        к 0.
-      </p>
-      <p>
-        Ошибочные данные, преобразованные к 0 будут выводиться в нижней части
-        страницы.
-      </p>
-      <p>
-        Ошибки с максимальными, минимальными числами или длиной массива будут с
-        подсказками.
-      </p>
-      <label
-        >Список:
-        <input type="text" placeholder="1,2,-9" name="list" />
-      </label>
+    <div id="mainСontainer">
+      <form name="getMax">
+        <h2>Получить максимальный элемент и его индекс.</h2>
+        <p>Поле "Список" принимает целые числа через запятую.</p>
+        <p>Максимально возможное значение: 10.</p>
+        <p>Минимально возможное значение: -10.</p>
+        <p>Количество элементов не должно быть больше 7.</p>
+        <p>
+          Ошибочные данные (буквы, точки, запятые в конце) будут
+          преобразовываться к 0.
+        </p>
+        <p>
+          Ошибочные данные, преобразованные к 0, будут выводиться в нижней части
+          страницы.
+        </p>
+        <p>
+          Ошибки с максимальными, минимальными числами или длиной массива будут
+          с подсказками.
+        </p>
+        <label
+          >Список:
+          <input type="text" placeholder="1,2,-9" name="list" />
+        </label>
+        <br />
+        <br />
+        <input type="submit" value="Получить ответ" />
+        <br />
+      </form>
       <br />
+      <div id="containerAnswer" class="hidden">
+        <div id="answer"></div>
+        <br />
+        <input type="button" id="clearAnswer" value="Убрать ответы" />
+      </div>
       <br />
-      <input type="submit" value="Получить ответ" />
-      <br />
-    </form>
-    <br />
-    <div id="containerAnswer" class="hidden">
-      <div id="answer"></div>
-      <br />
-      <input type="button" id="clearAnswer" value="Убрать ответы" />
-    </div>
-    <br />
-    <div id="containerErrorInput" class="hidden">
-      <h3>значения, стертые валидацией</h3>
-      <div id="errorInput"></div>
-      <br />
-      <input
-        type="button"
-        value="Очистить данные первичной валидации"
-        id="clearErrorInput"
-      />
+      <div id="containerErrorInput" class="hidden">
+        <h3>значения, стертые валидацией</h3>
+        <div id="errorInput"></div>
+        <br />
+        <input
+          type="button"
+          value="Очистить данные первичной валидации"
+          id="clearErrorInput"
+        />
+      </div>
     </div>
     <script src="./src/script.js"></script>
   </body>
