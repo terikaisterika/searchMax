@@ -15,6 +15,12 @@ function checkLength(arr, maxLength = 7) {
   }
   return `${messageMax}${messageMin}`;
 }
+function goToBeginning() {
+  if (input.value == '0') {
+    input.selectionStart = 0;
+    input.selectionEnd = 0;
+  }
+}
 /**
  * Проверка: все числа в пределах минимальных, максимальных чисел
  * @param {number[]} arr массив значений
@@ -152,12 +158,12 @@ const buttonSubmit = getWebElement('input[type="submit"]');
 const buttonClear = getWebElement('#clearAnswer');
 
 const input = getWebElement('[name="list"]');
+input.addEventListener('focus', goToBeginning);
 input.addEventListener('change', checkInput);
 buttonSubmit.addEventListener('click', getMaxUI);
 buttonClear.addEventListener('click', () => {
   divAnswer = getWebElement('#answer');
   divAnswer.innerText = '';
-  //divContainerAnswer = getWebElement('#containerAnswer');
   divContainerAnswer.classList.toggle('hidden');
 });
 const errorInput = getWebElement('#errorInput');

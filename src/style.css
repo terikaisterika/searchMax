@@ -1,5 +1,6 @@
 body {
   padding: 10px;
+  background-color: aliceblue
 }
 .heading {
   text-align: center
@@ -13,7 +14,7 @@ h3 {
 input {
   padding: 10px;
   border-radius: 3px;
-  background-color: #e1dbdb;
+  background-color: #bccccc;
   border: 1px solid black;
 }
 button {
