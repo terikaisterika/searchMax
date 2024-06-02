@@ -17,8 +17,7 @@ function checkLength(arr, maxLength = 7) {
 }
 function goToBeginning() {
   if (input.value == '0') {
-    input.selectionStart = 0;
-    input.selectionEnd = 0;
+    input.setSelectionRange(0, 0);
   }
 }
 /**
