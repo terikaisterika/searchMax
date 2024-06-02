@@ -67,6 +67,22 @@ function getWebElement(locator) {
   return document.querySelector(locator);
 }
 /**
+ * Проверка разрешенной длины для вывода
+ * @param {string} value
+ * @param {number} allowedLength
+ * @returns
+ */
+function checkLengthValidation(value, allowedLength = 50) {
+  resultValue = '';
+  if (value.length > allowedLength) {
+    truncatedValue = value.substring(0, allowedLength);
+    resultValue = `Часть данных обрезана: ${truncatedValue}`;
+  } else {
+    resultValue = value;
+  }
+  return resultValue;
+}
+/**
  * срабатывает при буквах, точках, цифры больше 2
  */
 function checkInput() {
@@ -74,7 +90,8 @@ function checkInput() {
   if (regExp.test(this.value)) {
     return;
   } else {
-    outputAnswer(this.value, '#errorInput');
+    let resultValue = checkLengthValidation(this.value);
+    outputAnswer(resultValue, '#errorInput');
     hideElement(containerErrorInput, false);
     this.value = 0;
   }
