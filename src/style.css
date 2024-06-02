@@ -15,10 +15,27 @@ input {
   background-color: #bccccc;
   border: 1px solid black;
 }
+input[type="text"]:hover{
+  background-color: #aec2c2;
+  border: 1px solid rgb(63, 60, 60);
+}
+input[type="text"]:focus{
+  background-color: #a4c2c2;
+}
+
 button {
   border-radius: 3px;
   background-color: #e1dbdb;
 }
+input[type="submit"]:hover,input[type="button"]:hover,button:hover{
+  background-color: #93b2b2;
+}
+input[type="submit"]:active, input[type="button"]:active,button:active{
+  background-color: #477b7b;
+  color: white;
+}
+
+
 .hint {
   font-size: 10;
   color: #0d0c0c;
