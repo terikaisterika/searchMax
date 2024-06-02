@@ -157,7 +157,7 @@ const buttonSubmit = getWebElement('input[type="submit"]');
 const buttonClear = getWebElement('#clearAnswer');
 
 const input = getWebElement('[name="list"]');
-input.addEventListener('focus', goToBeginning);
+input.addEventListener('click', goToBeginning);
 input.addEventListener('change', checkInput);
 buttonSubmit.addEventListener('click', getMaxUI);
 buttonClear.addEventListener('click', () => {
